@@ -1,7 +1,8 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 int main() {
-    char nomeArquivo[100]; // Considerando nome até 100 caracteres
+    char nomeArquivo[100]; // Considerando nome atÃ© 100 caracteres
     char caractere;
     int contagem = 0;
 
@@ -14,7 +15,7 @@ int main() {
     FILE *arquivo = fopen(nomeArquivo, "r"); // abrindo o arquivo
     if (arquivo == NULL) {
         printf("Erro ao abrir o arquivo.\n");
-        return 1;
+        exit(1);
     }
 
     int c;
@@ -25,7 +26,7 @@ int main() {
 
     fclose(arquivo); //Fechando o arquivo
 
-    printf("O caractere '%c' ocorre %d vezes no arquivo.\n", caractere, contagem); // Demonstando resultado
+    printf("O caractere '%c' aparece %d vezes no arquivo\n", caractere, contagem); // Demonstando resultado
 
     return 0;
 }
