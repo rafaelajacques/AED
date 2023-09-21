@@ -1,7 +1,6 @@
-#include <stdio.h> // necessária para as funções printf e scanf
-#include <stdlib.h>// necessário p/ as funções rand() e srand()
-#include<time.h> //necessário p/ função time()
-#include <locale.h> // necessária para deixar palavras acentuadas
+#include <stdlib.h>// necessÃ¡rio p/ as funÃ§Ãµes rand() e srand()
+#include<time.h> //necessÃ¡rio p/ funÃ§Ã£o time()
+#include <locale.h> // necessÃ¡ria para deixar palavras acentuadas
 
 int main()
 {
@@ -11,20 +10,22 @@ int main()
 
   setlocale(LC_ALL, "Portuguese");
   
-  printf("Digite um número base: ");
+  printf("Digite um nÃºmero base: ");
   scanf ("%d", &numero);
   
   file = fopen("Lista 04 - 01.txt","w");
   
-  fprintf(file,"%d números gerados!\n", numero);
-  printf("\n%d números gerados!\n", numero);
+  fprintf(file,"%d nÃºmeros gerados!\n", numero);
+  printf("\n%d nÃºmeros gerados!\n", numero);
   
-  srand(time(NULL)); // Impede que haja repetição de números
+  srand(time(NULL)); // Impede que haja repetiÃ§Ã£o de nÃºmeros
   
 	do{
-		fprintf(file,"%d\n", rand() % 100); //Gera números aleatórios
+		fprintf(file,"%d\n", rand() % 100); //Gera nÃºmeros aleatÃ³rios
 		i++;
 	}while(i<numero);
+	
+	fclose(file);
 	
   return 0;
 }
