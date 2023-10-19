@@ -14,10 +14,10 @@ int main ()
 {
 	setlocale(LC_ALL, "");
 	int num, contador, total;
-	printf("Digite um número: ");
+	printf("Digite um nÃºmero: ");
 	scanf("%d", &num);
-	total = tabuada(num, contador); // Chama a função tabuada e armazena a soma em "total"
-    printf("\n  Soma = %d\n", total); // Imprime a soma total
+	total = tabuada(num, contador); // Chama a funÃ§Ã£o tabuada e armazena a soma em "total"
+    printf("\nSoma = %d\n", total); // Imprime a soma total
 	
 	
 	return 0;
