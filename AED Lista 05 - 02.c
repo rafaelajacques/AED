@@ -1,27 +1,21 @@
 #include <stdio.h>
 #include <locale.h>
 
-int fatorial (int x, int fat){
-
-	for(fat = 1; x > 1; x = x - 1)
-  {
-      fat = fat * x;
-  }
-  printf("\n%d", fat);
+void verificar (int x)
+{
+	if(x % 2 == 0){
+		printf("O número é par!");
+	}else{
+		printf("O número é ímpar!");
+	}	
 }
 
-int main ()
-{
-	int num, fat;
+int main(){
+	int num;
 	setlocale(LC_ALL, "");
-	printf("Digite um n�mero inteiro:");
-	scanf("%d",&num);
-	if(num < 0){
-		printf ("\nDigite um numero v�lido: ");
-	}	
-	
-	scanf("%d",&num);
-	fatorial(num, fat);
+	printf("Digite um número inteiro: ");
+	scanf("%d", &num);
+	verificar(num);
 	
 	return 0;
 }
