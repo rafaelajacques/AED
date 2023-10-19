@@ -3,23 +3,20 @@
 
 int fatorial (int x, int fat){
 
-	for(fat = 1; x > 1; x = x - 1)
-  {
+	for(fat = 1; x > 1; x--){
       fat = fat * x;
-  }
-  printf("\n%d", fat);
+  	}
+ 		 printf("\n%d", fat);
 }
 
 int main ()
 {
 	int num, fat;
 	setlocale(LC_ALL, "");
-	printf("Digite um número inteiro:");
-	scanf("%d",&num);
+	printf("Digite um nÃºmero inteiro:");
 	if(num < 0){
-		printf ("\nDigite um numero válido: ");
+		printf ("\nDigite um numero vÃ¡lido: ");
 	}	
-	
 	scanf("%d",&num);
 	fatorial(num, fat);
 	
