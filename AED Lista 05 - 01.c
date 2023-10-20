@@ -2,7 +2,7 @@
 #include <locale.h>
 
 void multiplicacao (int x){
-	int i,j;
+	int i,j; // i = contador vertical, j = contador horizontal
 	for(i=1; i<=x; i++){
 		for(j=1; j<=i; j++){
 			printf("%d ",i*j);
@@ -14,10 +14,10 @@ void multiplicacao (int x){
 int main(){
 	int num;
 	setlocale(LC_ALL, "");
-	printf("Digite um número entre 1 e 9: ");
+	printf("Digite um nÃºmero entre 1 e 9: ");
 	scanf("%d", &num);
 	if(num <1 || num >9){
-		printf("Digite um número válido!");
+		printf("Digite um nÃºmero vÃ¡lido!");
 	}while (num <1 || num >9);
 	
 	multiplicacao(num);
